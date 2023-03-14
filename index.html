@@ -1,0 +1,282 @@
+<!Doctype>
+<html>
+<head>
+	<title> Form Registration </title>
+	<style>
+		input[type=text], input[type=password]{
+			padding: 10px;
+			margin: 5px;
+			border-radius: 5px;
+			border: 1px solid darkred;
+			box-sizing: border-box;
+		}
+			
+		}
+		button[type=submit] {
+			background-color: #008080;
+			color: #008080;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+.error-message {
+      color: red;
+      font-size: 14px;
+      border: 1px solid red;
+      margin-top: 5px;
+      display: none;
+    }
+
+	</style>
+</head>
+<body>
+	<h1>Registration Form</h1>
+	<form>
+		<div class="form-group">
+			<label for="region">Region</label>
+			<select type="text" id="region" name="region" required><br>
+				<option>--Select Region--</option>
+				<option>National Capital Region (NCR)</option>
+				<option>Luzon REGION I(Ilocos Region)</option>
+				<option>Luzon REGION II (cagayan Valley)</option>
+				<option>Luzon REGION III (Central Luzon)</option>
+				<option>Luzon REGION IV-A (CALABARZON)</option>
+				<option>REGION IV-B (MIMAROPA)</option>
+				<option>REGION V (Bicol Region)</option>
+				<option>REGION VI (Western Visayas)</option>
+				<option>REGION VII (Central Visayas)</option>
+				<option>REGION VIII (Eastern Visayas)</option>
+				<option>REGION IX (Zamboanga Peninsula)</option>
+				<option>REGION X (Northern Mindanao)</option>
+				<option>REGION XI (Davao Region)</option>
+				<option>REGION XII (Soccsksargen)</option>
+				<option>REGION XIII (CARAGA)</option>
+				<option>Luzon REGION XVI Cordillera Administrative Region (CAR)</option>
+				<option>REGION XV- Automous Region in Muslim Mindanao(ARMM)</option>
+				<option>REGION XVIII-NIR-Negros Island Regio)</option></select>
+			<span class="error-message" id="region-error" name="region" class="form-control">
+			</span></div>
+
+		<div class="form-group">
+		<label for="firsname">Firstname:</label>
+    <input type="text" id="firstname" name="firstname" required ><br>
+    <span class="error-message" id="firstname-error" name="firstname" class="form-control">
+    </span></div>
+
+    <div class="form-group">
+    <label for="middle name">Middle name:</label>
+    <input type="text" id="middle name" name="middle name"><br>
+    <span class="error-message" id="middlename-error" name="middlename" class="form-control">
+    </span></div>
+
+    <div class="form-group">
+    <label for="lastname">Lastname:</label>
+    <input type="text" id="lastname" name="lastname" required><br>
+    <span class="error-message" id="lastname-error" name="lastname" class="form-control">
+    </span></div>
+
+
+    <div class="form-group">
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required><br>
+    <span class="error-message" id="address-error" name="address" class="form-control">
+    </span></div>
+
+   <div class="form-group">
+    <label for="telephone">Telephone:</label>
+    <input type="text" id="telephone" name="telephone"><br>
+    <span class="error-message" id="telephone-error" name="telephone" class="form-control">
+    </span></div>
+
+
+    <div class="form-group">
+    <label for="mobile_no">Mobile No.:</label>
+    <input type="text" id="mobile_no" name="mobile_no" required><br>
+    <span class="error-message" id="mobile_no-error" name="mobile_no" class="form-control"></span></div>
+
+    <div class="form-group">
+    <label for="email_address">E-mail Address:</label>
+    <input type="text" id="email_address" name="email_address" required><br>
+    <span class="error-message" id="email_address-error" name="email_address" class="form-control">
+    </span></div>
+
+    <div class="form-group">
+    <label for="birthdate">Birthdate:</label>
+    <input type="text" id="birthdate" name="birthdate" required><br>
+    <span class="error-message" id="birthdate-error" name="birthdate" class="form-control">
+    </span></div>
+
+    <div class="form-group">
+    <label for="sex">Sex:</label>
+    <input type="text" id="sex" name="sex" required><br>
+    <span class="error-message" id="sex-error" name="sex" class="form-control">
+    </span></div>
+
+    <div class="form-group">
+    <label for="civil_status">Civil Status:</label>
+    <input type="text" id="civil_status" name="civil_status" required><br>
+    <span class="error-message" id="civil_status-error" name="civil_status" class="form-control">
+    </span></div>
+    
+    <div class="form-group">
+    <label for="blood_type">Blood Type:</label>
+    <input type="text" id="blood_type" name="blood_type" required><br>
+    <span class="error-message" id="blood_type-error" name="blood_type" class="form-control">
+    </span></div>
+
+    <div class="form-group">
+    <label for="religion">Religion:</label>
+    <input type="text" id="religion" name="religion" required><br>
+    <span class="error-message" id="religion-error" name="religion" class="form-control">
+    </span></div>
+
+     <div class="form-group">
+    <label for="highest_educational_attainment">Highest Educational Attainment:</label>
+    <input type="text" id="highest_educational_attainment" name="highest_educational_attainment" required><br>
+    <span class="error-message" id="highest_educational_attainment-error" name="highest_educational_attainment" class="form-control">
+    </span></div>
+    
+    
+
+    <button type="submit">Register</button>
+</form>
+
+
+ <script>
+    
+    const firstnameInput = document.getElementById('firstname');
+    const lastnameInput = document.getElementById('lastname');
+    const addressInput = document.getElementById('address');
+    const mobile_noInput = document.getElementById('mobile_no');
+    const email_addressInput = document.getElementById('email_address');
+    const birthdateInput = document.getElementById('birthdate');
+    const sexInput = document.getElementById('sex');
+    const civil_statusInput = document.getElementById('civil_status');
+    const blood_typeInput = document.getElementById('blood_type');
+    const religionInput = document.getElementById('religion');
+    const highest_educational_attainmentInput = document.getElementById('highest_educational_attainment');
+
+
+    const regionError = document.getElementById('region-error');
+    const firstnameError = document.getElementById('firstname-error');
+    const lastnameError = document.getElementById('lastname-error');
+    const addressError = document.getElementById('address-error');
+    const mobile_noError = document.getElementById('mobile_no-error');
+    const email_addressError = document.getElementById('email_address-error');
+    const birthdateError = document.getElementById('birthdate-error');
+    const sexError = document.getElementById('sex-error');
+    const civil_statusError = document.getElementById('civil_status-error');
+    const blood_typeError = document.getElementById('blood_type-error');
+    const religionError = document.getElementById('religion-error');
+     const highest_educational_attainmentError = document.getElementById('highest_educational_attainment-error');
+
+
+   
+
+
+    firstnameInput.addEventListener("input", function() {
+      if (firstnameInput.value.length < 8) {
+        firstnameError.textContent = "Firstname must be at least 8 characters";
+        firstnameError.style.display = "block";
+      } else {
+        firstnameError.style.display = "none";
+      }
+    });
+
+
+    lastnameInput.addEventListener("input", function() {
+      if (lastnameInput.value.length < 8) {
+        lastnameError.textContent = "Lastname must be at least 8 characters";
+        lastnameError.style.display = "block";
+      } else {
+        lastnameError.style.display = "none";
+      }
+    });
+
+    addressInput.addEventListener("input", function() {
+      if (addressInput.value.length < 5) {
+        addressError.textContent = "Address must be at least 5 characters";
+        addressError.style.display = "block";
+      } else {
+        addressError.style.display = "none";
+      }
+    });
+   
+  	mobile_noInput.addEventListener("input", function() {
+      if (mobile_noInput.value.length  > 11) {
+        mobile_noError.textContent = "Mobile NO. must be 11 characters";
+        mobile_noError.style.display = "block";
+      } else {
+        mobile_noError.style.display = "none";
+      }
+    });
+
+    	email_addressInput.addEventListener("input", function() {
+      if (email_addressInput.value.length  = 5) {
+        email_addressError.textContent = "Email Address must be 5 characters";
+        email_addressError.style.display = "block";
+      } else {
+        email_addressError.style.display = "none";
+      }
+    });
+
+    	birthdateInput.addEventListener("input", function() {
+      if (birthdateInput.value.length > 10) {
+        birthdateError.textContent = "Birthdate must be 10 characters";
+        birthdateError.style.display = "block";
+      } else {
+        birthdateError.style.display = "none";
+      }
+    });
+
+    	sexInput.addEventListener("input", function() {
+      if (sexInput.value.length  > 6) {
+        sexError.textContent = "Sex must be 6 characters";
+        sexError.style.display = "block";
+      } else {
+        sexError.style.display = "none";
+      }
+    });
+
+    	 civil_statusInput.addEventListener("input", function() {
+      if (civil_statusInput.value.length < 9) {
+        civil_statusError.textContent = "Civil Status must be at least 9 characters";
+        civil_statusError.style.display = "block";
+      } else {
+       civil_statusError.style.display = "none";
+      }
+    });
+
+    	 blood_typeInput.addEventListener("input", function() {
+      if (blood_typeInput.value.length > 3) {
+        blood_typeError.textContent = "Blood Type must be at least 3 characters";
+        blood_typeError.style.display = "block";
+      } else {
+       blood_typeError.style.display = "none";
+      }
+    });
+
+    	 religionInput.addEventListener("input", function() {
+      if (religionInput.value.length < 9) {
+        religionError.textContent = "must be at least 9 characters";
+        religionError.style.display = "block";
+      } else {
+       religionError.style.display = "none";
+      }
+    });
+
+    	  highest_educational_attainmentInput.addEventListener("input", function() {
+      if (highest_educational_attainmentInput.value.length < 9) {
+        highest_educational_attainmentError.textContent = "must be at least 9 characters";
+        highest_educational_attainmentError.style.display = "block";
+      } else {
+       highest_educational_attainmentError.style.display = "none";
+      }
+    });
+
+
+  </script>
+</body>
+	</html>
+
